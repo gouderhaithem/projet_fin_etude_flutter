@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.thirdapplication.MainActivity"
+
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/teal_700"
+        app:contentInsetStart="0dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:drawableStart="@drawable/back" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Commande de : "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Grossite Kaf Na3ja" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="120dp"
+                android:drawableStart="@drawable/search" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:drawableStart="@drawable/scanner" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <!-- select date -->
+    <!-- select date -->
+    <LinearLayout
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="horizontal"
+
+
+        >
+
+        <TextView
+            android:id="@+id/selectDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:drawableStart="@drawable/calender"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/DateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="50dp"
+            android:gravity="center"
+            android:text="2023-11-18"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+
+            />
+
+
+    </LinearLayout>
+    <!-- end select date section  -->
+    <!-- ListView -->
+    <ListView
+
+        android:id="@+id/list"
+        android:layout_below="@id/date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomAppBar"
+
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <!-- FloatingActionButton -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/ic_baseline_shopping_cart_24"
+        app:backgroundTint="#FFFFFF"
+        app:fabSize="normal" />
+
+    <!-- BottomAppBar -->
+    <!-- BottomAppBar -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-4dp"
+        app:backgroundTint="#039B9C"
+        app:fabAlignmentMode="end"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/totalPrice"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="#00FF00"
+                android:text="200 DZD"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#025253" /> <!-- Green color -->
+
+        </LinearLayout>
+
+        <!-- Container inside BottomAppBar -->
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+    <!-- Add menu items for the BottomAppBar here if needed -->
+
+
+
+</RelativeLayout>
